@@ -22,7 +22,9 @@ const CTASection: React.FC = () => {
                  Join 500+ D2C brands that have automated their operations. Stop leaking revenue today.
                </p>
                <button className="bg-white text-clevrr-secondary hover:bg-slate-100 px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center gap-2 mx-auto md:mx-0">
-                 Book a Live Demo <ArrowRight className="w-5 h-5" />
+                <a href="https://cal.getclevrr.com/demo" target="_blank">
+                  Book a Live Demo <ArrowRight className="w-5 h-5" />
+                </a>
                </button>
             </div>
 

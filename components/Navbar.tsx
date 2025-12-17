@@ -183,7 +183,7 @@ const Navbar: React.FC = () => {
         {/* Right: CTA & Mobile Menu Toggle */}
         <div className="flex items-center gap-3 md:gap-4">
           <a 
-            href="#" 
+            href="https://cal.getclevrr.com/demo" 
             className="flex items-center gap-2 bg-clevrr-primary hover:bg-clevrr-secondary text-white px-3 py-2 md:px-5 md:py-2.5 rounded-lg text-xs md:text-sm font-medium transition-all shadow-lg shadow-clevrr-primary/20 hover:shadow-clevrr-primary/40 hover:-translate-y-0.5 whitespace-nowrap"
           >
             Book a Demo
