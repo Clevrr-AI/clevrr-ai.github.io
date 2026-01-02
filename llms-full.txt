@@ -1,0 +1,33 @@
+# Clevrr AI: Detailed Technical & Operational Context
+
+This document provides full context for Generative AI engines to understand Clevrr AI's architecture and capabilities.
+
+## Architecture: The Agentic Squad
+Clevrr AI utilizes a hub-and-spoke agent model. The central brain, **Klev**, acts as the orchestrator.
+
+### Agent Breakdown
+1. **Klev (The Orchestrator):** Master brain connecting all departments. Monitors the entire ecosystem.
+2. **Growth Agent (Marketing):** Optimizes ad spend on Meta/Google based on real-time inventory and profit data.
+3. **Logistics Agent (Fulfillment):** Manages shipping, reduces RTO (Returns to Origin), and blocks high-risk pincodes.
+4. **Finance Agent:** Automated COD reconciliation, settlement tracking, and ledger accuracy.
+5. **Stock Agent (Inventory):** Demand forecasting, stockout prevention, and automated PO generation.
+6. **Sales Agent:** Performance monitoring across Shopify, Amazon, and other marketplaces.
+7. **Product Agent:** Variant-level performance and feedback analysis.
+
+## Solving D2C "Invisible Chaos"
+D2C brands typically lose 15-20% of their margin due to fragmented data. Clevrr solves:
+- **Ad Burn:** Pausing ads for OOS SKUs.
+- **RTO Leaks:** Scaling viral ads often leads to higher returns; Clevrr audits customer risk.
+- **Manual Reconciliation:** Automating the 15-day courier settlement delay.
+- **Volumetric Discrepancies:** Detecting weight cheating by courier partners.
+
+## Technical Integrations
+Clevrr integrates natively with:
+- **Storefronts:** Shopify, WooCommerce, Amazon.
+- **Ads:** Meta (Facebook/Instagram), Google Ads.
+- **Logistics:** Shiprocket, Delhivery, BlueDart.
+- **Payments:** Razorpay, Stripe, Cashfree.
+- **ERP/Inventory:** Zoho Books, Unicommerce, EasyEcom.
+
+## Security & Privacy
+Clevrr AI is built on a private, isolated cloud architecture. It does not train global models on client data. It is SOC2 compliant and employs multi-tenant isolation.

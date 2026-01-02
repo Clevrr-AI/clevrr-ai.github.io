@@ -3,7 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Cofounder for D2C Brands | Clevrr AI</title>
+    
+    <!-- Zoho PageSense -->
+    <script src="https://cdn-in.pagesense.io/js/60039713772/1b6851f6099840e7a45b965d71b40870.js"></script>
+    
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="5ufQ5K555hQONhlJHaJKZ7m2bZIvRIEHQntk6sKWi78" />
+
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YHSNJ5PGX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9YHSNJ5PGX');
+    </script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Clevrr AI | Autonomous AI Co-founder for D2C Brands</title>
+    <meta name="title" content="Clevrr AI | Autonomous AI Co-founder for D2C Brands" />
+    <meta name="description" content="Clevrr AI is an autonomous AI co-founder that helps D2C brands automate marketing, reduce RTO, reconcile payments, and prevent stockouts. Scale your brand with agentic intelligence." />
+    <meta name="keywords" content="D2C AI, AI Co-founder, eCommerce automation, RTO reduction, marketing intelligence, inventory forecasting, Shopify AI, Meta Ads optimization" />
+    <meta name="author" content="Clevrr AI" />
+    <link rel="canonical" href="https://getclevrr.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://getclevrr.com/" />
+    <meta property="og:title" content="Clevrr AI | Autonomous AI Co-founder for D2C Brands" />
+    <meta property="og:description" content="Automate 95% of your D2C operations. Connect Shopify, Meta, and Logistics to our specialized AI agents." />
+    <meta property="og:image" content="https://getclevrr.com/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://getclevrr.com/" />
+    <meta property="twitter:title" content="Clevrr AI | Autonomous AI Co-founder for D2C Brands" />
+    <meta property="twitter:description" content="Automate 95% of your D2C operations. Connect Shopify, Meta, and Logistics to our specialized AI agents." />
+    <meta property="twitter:image" content="https://getclevrr.com/og-image.png" />
+
+    <!-- JSON-LD Structured Data for SEO/AEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Clevrr AI",
+      "operatingSystem": "Web",
+      "applicationCategory": "BusinessApplication",
+      "description": "Autonomous AI co-founder for D2C brands automating marketing, logistics, and finance.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "500"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Clevrr AI",
+      "url": "https://getclevrr.com",
+      "logo": "https://getclevrr.com/logos/logo-dark.png",
+      "sameAs": [
+        "https://twitter.com/getclevrr",
+        "https://linkedin.com/company/clevrr-ai"
+      ]
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +130,6 @@
       body {
         overflow-x: hidden;
       }
-      /* Custom scrollbar hiding if needed */
       .no-scrollbar::-webkit-scrollbar {
         display: none;
       }
@@ -65,7 +137,6 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
       }
-      /* Custom gradient text utility for the pulse effect */
       .text-gradient-pulse {
         background: linear-gradient(135deg, #2A51F4 0%, #a5b0ff 10%, #2A51F4 100%);
         background-size: 200% auto;
@@ -74,29 +145,16 @@
         background-clip: text;
         animation: gradientMove 4s linear infinite;
       }
-      /* Vivid gradient background for the button */
       .bg-gradient-vivid {
         background: linear-gradient(135deg, #2A51F4 0%, #ff5f5f 100%);
         background-size: 200% 200%;
         animation: gradientMove 4s ease infinite;
       }
-      
-      /* 3D Transform Utilities */
-      .perspective-1000 {
-        perspective: 1000px;
-      }
-      .transform-style-3d {
-        transform-style: preserve-3d;
-      }
-      .rotate-x-12 {
-        transform: rotateX(12deg);
-      }
-      .rotate-x-20 {
-        transform: rotateX(20deg);
-      }
-      .backface-hidden {
-        backface-visibility: hidden;
-      }
+      .perspective-1000 { perspective: 1000px; }
+      .transform-style-3d { transform-style: preserve-3d; }
+      .rotate-x-12 { transform: rotateX(12deg); }
+      .rotate-x-20 { transform: rotateX(20deg); }
+      .backface-hidden { backface-visibility: hidden; }
 
       @keyframes gradientMove {
         0% { background-position: 0% 50%; }
@@ -109,6 +167,9 @@
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@6.28.0",
+    "react-router": "https://aistudiocdn.com/react-router@6.28.0",
+    "@remix-run/router": "https://aistudiocdn.com/@remix-run/router@1.21.0",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
     "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24"

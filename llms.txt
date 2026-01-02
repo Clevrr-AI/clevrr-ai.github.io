@@ -1,0 +1,19 @@
+# Clevrr AI: The Autonomous AI Co-founder for D2C Brands
+
+Clevrr AI is an agentic platform designed to unify and automate the operations of D2C (Direct-to-Consumer) businesses. It acts as an orchestrator that connects siloed departments like Marketing, Logistics, Finance, and Sales.
+
+## Core Value Proposition
+- **Autonomous Action:** Unlike dashboards, Clevrr executes fixes (e.g., pausing ads on out-of-stock items).
+- **Specialized Agents:** Six distinct AI agents (Klev, Growth, Logistics, Finance, Stock, Sales, Product).
+- **Rapid Integration:** 1-click OAuth setup with Shopify, Meta, Amazon, and more.
+
+## Key Performance Areas
+- **RTO Reduction:** Blocks high-risk orders automatically.
+- **Profit Optimization:** ROAS vs. Net Margin analysis.
+- **Inventory Health:** Predicts stockouts to protect ad spend.
+- **Payment Reconciliation:** Automates COD tracking with couriers.
+
+## Essential Facts
+- **Founded:** 2024
+- **Security:** SOC2 Compliant, AES-256 Encryption.
+- **Target Audience:** D2C Founders, E-commerce Operators, Growth Managers.
