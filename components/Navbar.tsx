@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   Menu, X, ChevronDown, ArrowRight,
   TrendingUp, Megaphone, Truck, Wallet, Tag, Users, LayoutDashboard,
-  Calculator, PieChart, BarChart4, Hourglass, PackageCheck, AlertTriangle
+  Calculator, PieChart, BarChart4, Hourglass, PackageCheck, AlertTriangle, Search
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -13,7 +13,7 @@ const SOLUTIONS = [
     title: "Sales Intelligence",
     description: "Boost conversions with AI-driven lead qualification.",
     icon: TrendingUp,
-    href: "#",
+    href: "/",
     color: "text-green-500",
     bgColor: "bg-green-50"
   },
@@ -21,7 +21,7 @@ const SOLUTIONS = [
     title: "Marketing Intelligence",
     description: "Automate content creation and optimize ad campaigns.",
     icon: Megaphone,
-    href: "#",
+    href: "/",
     color: "text-orange-500",
     bgColor: "bg-orange-50"
   },
@@ -29,7 +29,7 @@ const SOLUTIONS = [
     title: "Fulfillment Intelligence",
     description: "Optimize shipping routes and reduce delivery times.",
     icon: Truck,
-    href: "#",
+    href: "/",
     color: "text-indigo-500",
     bgColor: "bg-indigo-50"
   },
@@ -37,7 +37,7 @@ const SOLUTIONS = [
     title: "Finance Intelligence",
     description: "Automate payment reconciliation and reporting.",
     icon: Wallet,
-    href: "#",
+    href: "/",
     color: "text-blue-500",
     bgColor: "bg-blue-50"
   },
@@ -45,7 +45,7 @@ const SOLUTIONS = [
     title: "Product Intelligence",
     description: "Prevent stockouts with intelligent demand forecasting.",
     icon: Tag,
-    href: "#",
+    href: "/",
     color: "text-purple-500",
     bgColor: "bg-purple-50"
   },
@@ -53,7 +53,7 @@ const SOLUTIONS = [
     title: "Customer Intelligence",
     description: "Gain deep insights into customer behavior.",
     icon: Users,
-    href: "#",
+    href: "/",
     color: "text-pink-500",
     bgColor: "bg-pink-50"
   },
@@ -61,7 +61,7 @@ const SOLUTIONS = [
     title: "Magic Dashboard",
     description: "Your entire business health in one single view.",
     icon: LayoutDashboard,
-    href: "#",
+    href: "/",
     color: "text-clevrr-primary",
     bgColor: "bg-blue-50"
   }
@@ -71,32 +71,37 @@ const TOOLS = [
   {
     title: "Unit Economics Calculator",
     icon: Calculator,
-    href: "#"
+    href: "https://useclevrr.com/d2c-calculators"
   },
   {
     title: "Profit Simulator",
     icon: PieChart,
-    href: "#"
+    href: "https://useclevrr.com/d2c-calculators"
   },
   {
     title: "Marketing Budget Planner",
     icon: BarChart4,
-    href: "#"
+    href: "https://useclevrr.com/d2c-calculators"
   },
   {
     title: "Runway Planner",
     icon: Hourglass,
-    href: "#"
+    href: "https://useclevrr.com/d2c-calculators"
   },
   {
     title: "Inventory Stock Planner",
     icon: PackageCheck,
-    href: "#"
+    href: "https://useclevrr.com/d2c-calculators"
   },
   {
     title: "RTO Simulator",
     icon: AlertTriangle,
-    href: "#"
+    href: "https://useclevrr.com/d2c-calculators"
+  },
+  {
+    title: "AI Search Visibility",
+    icon: Search,
+    href: "https://useclevrr.com/ai-visibility"
   }
 ];
 
@@ -117,8 +122,8 @@ const Navbar: React.FC = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || mobileMenuOpen || activeDropdown
+      className={`z-50 transition-all duration-300 ${
+        isScrolled ? "fixed top-0 left-0 right-0 bg-white border-b border-slate-200 shadow-sm" : mobileMenuOpen || activeDropdown
           ? "bg-white border-b border-slate-200 shadow-sm" 
           : "bg-white/80 backdrop-blur-md border-b border-transparent"
       }`}
@@ -128,7 +133,7 @@ const Navbar: React.FC = () => {
         
         {/* Left: Logo */}
         <div className="flex items-center gap-8 z-20">
-          <a href="#" className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2">
             <img 
               src="https://getclevrr.com/logos/logo-dark.png" 
               alt="Clevrr AI" 
@@ -170,10 +175,10 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Direct Links */}
-            <a href="#" className="px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
+            <a href="https://blog.getclevrr.com" className="px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
               Blogs
             </a>
-            <a href="#" className="px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
+            <a href="https://getclevrr.com/integrations" className="px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
               Integrations
             </a>
 
@@ -181,21 +186,33 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Right: CTA & Mobile Menu Toggle */}
-        <div className="flex items-center gap-3 md:gap-4">
-          <a 
-            href="https://cal.getclevrr.com/demo" 
-            className="flex items-center gap-2 bg-clevrr-primary hover:bg-clevrr-secondary text-white px-3 py-2 md:px-5 md:py-2.5 rounded-lg text-xs md:text-sm font-medium transition-all shadow-lg shadow-clevrr-primary/20 hover:shadow-clevrr-primary/40 hover:-translate-y-0.5 whitespace-nowrap"
-          >
-            Book a Demo
-            <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
-          </a>
+        <div className='flex'>
+          <div className="flex items-center gap-3 me-5 md:gap-4">
+            <a
+              href="https://useclevrr.com/ai-visibility"
+              className="flex items-center gap-2 bg-clevrr-secondary hover:bg-clevrr-primary text-white px-3 py-2 md:px-5 md:py-2.5 rounded-lg text-xs md:text-sm font-medium transition-all shadow-lg shadow-clevrr-primary/20 hover:shadow-clevrr-primary/40 hover:-translate-y-0.5 whitespace-nowrap"
+            >
+              AI Visibility
+              <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
+            </a>
+          </div>
 
-          <button 
-            className="lg:hidden p-1 text-slate-700"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="flex items-center gap-3 md:gap-4">
+            <a
+              href="https://cal.getclevrr.com/demo"
+              className="flex items-center gap-2 bg-clevrr-primary hover:bg-clevrr-secondary text-white px-3 py-2 md:px-5 md:py-2.5 rounded-lg text-xs md:text-sm font-medium transition-all shadow-lg shadow-clevrr-primary/20 hover:shadow-clevrr-primary/40 hover:-translate-y-0.5 whitespace-nowrap"
+            >
+              Book a Demo
+              <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
+            </a>
+
+            <button
+              className="lg:hidden p-1 text-slate-700"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -233,22 +250,6 @@ const Navbar: React.FC = () => {
                     </div>
                   </a>
                 ))}
-              </div>
-              <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between bg-slate-50/50 -mx-6 px-6 -mb-8 py-4">
-                <div className="flex items-center gap-6">
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Featured</span>
-                    <a href="#" className="text-sm font-medium text-slate-700 hover:text-clevrr-primary flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                        Live Commerce
-                    </a>
-                    <a href="#" className="text-sm font-medium text-slate-700 hover:text-clevrr-primary flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-purple-500"></span>
-                        Agentic Workflows
-                    </a>
-                </div>
-                <a href="#" className="text-sm font-bold text-clevrr-primary flex items-center gap-1 hover:underline">
-                    View all capabilities <ArrowRight className="w-4 h-4" />
-                </a>
               </div>
             </div>
           </motion.div>
@@ -337,8 +338,8 @@ const Navbar: React.FC = () => {
               </div>
 
               {/* Mobile Links */}
-              <a href="#" className="block px-4 py-4 text-slate-700 font-medium hover:bg-slate-50 border-b border-slate-100">Blogs</a>
-              <a href="#" className="block px-4 py-4 text-slate-700 font-medium hover:bg-slate-50 border-b border-slate-100">Integrations</a>
+              <a href="https://blog.getclevrr.com" className="block px-4 py-4 text-slate-700 font-medium hover:bg-slate-50 border-b border-slate-100">Blogs</a>
+              <a href="https://getclevrr.com/integrations" className="block px-4 py-4 text-slate-700 font-medium hover:bg-slate-50 border-b border-slate-100">Integrations</a>
               
             </div>
           </motion.div>
